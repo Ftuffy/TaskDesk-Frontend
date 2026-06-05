@@ -47,18 +47,17 @@ No  Nama                                    /No. Absen
 1. Diraja Kredo Saujana (8)
    - Membuat UI/UX Design di Figma
    - Membuat tampilan (layout) di Android Studio
-   - [tambahkan tugas lainnya]
 
 2. Fatih Daffa Dzaki Al Huda (12)
    - Membuat visual dan logic di Android Studio
    - Menyambungkan API ke project Android Studio
 
 3. Mahendra Brian Pramudya Admaja (20)
-   - Membuat Api Serve
+   - Membuat Api Laravel
    - Membuat DataBase
 
 4. Sahlan Sahara Qolbi (28)
-   - Membuat Api Serve
+   - Membuat Api Laravel
    - Membuat DataBase
 
 ===== LINK PENTING =====
