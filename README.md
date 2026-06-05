@@ -34,7 +34,7 @@ TEKNOLOGI YANG DIGUNAKAN
 ===== ANGGOTA KELOMPOK ==== 
 ================================================================
 
-No  Nama                                    NIM/No. Absen
+No  Nama                                    /No. Absen
 --  ----                                    -------------
 1.  Diraja Kredo Saujana                    (8)
 2.  Fatih Daffa Dzaki Al Huda               (12)
