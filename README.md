@@ -74,7 +74,7 @@ https://github.com/Geyeeem/manajement-Tugas_-BE-.git
 
 Link APK
 ---------
-[isi link APK setelah diupload ke Google Drive]
+https://drive.google.com/file/d/10_psZjlQeVUX6My8vD4N34eu7tY1BGOB/view?usp=drive_link
 
 
 ===== CARA MENJALANKAN APLIKASI =====
