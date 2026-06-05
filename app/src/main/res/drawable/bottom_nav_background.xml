@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/drawable/bottom_nav_background.xml -->
+<!-- Background untuk Bottom Navigation yang lebih rapi -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Background color semi-transparan -->
+    <solid android:color="#50FFFFFF" />
+
+    <!-- Rounded corners di atas -->
+    <corners
+        android:topLeftRadius="24dp"
+        android:topRightRadius="24dp"
+        android:bottomLeftRadius="24dp"
+        android:bottomRightRadius="24dp" />
+
+    <!-- Border putih -->
+    <stroke
+        android:width="2dp"
+        android:color="#60FFFFFF" />
+
+</shape>

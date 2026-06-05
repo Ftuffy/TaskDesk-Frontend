@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardTask"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="8dp"
+    android:layout_marginHorizontal="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="@android:color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Checkbox -->
+        <CheckBox
+            android:id="@+id/checkboxComplete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:buttonTint="#5271FF" />
+
+        <!-- Category Badge -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/badgeCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="4dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="#5271FF"
+            app:layout_constraintStart_toEndOf="@id/checkboxComplete"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="School"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="4dp" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Type Badge -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/badgeType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="#F0F0FF"
+            app:layout_constraintStart_toEndOf="@id/badgeCategory"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvTaskType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Daily"
+                android:textColor="#5271FF"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="4dp" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Task Title -->
+        <TextView
+            android:id="@+id/tvTaskTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Mengerjakan Tugas Matematika"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#1A1A1A"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toEndOf="@id/checkboxComplete"
+            app:layout_constraintEnd_toStartOf="@id/btnMore"
+            app:layout_constraintTop_toBottomOf="@id/badgeCategory"
+            />
+
+        <!-- Task Description -->
+        <TextView
+            android:id="@+id/tvTaskDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Selesaikan soal halaman 45-50"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@id/checkboxComplete"
+            app:layout_constraintEnd_toStartOf="@id/btnMore"
+            app:layout_constraintTop_toBottomOf="@id/tvTaskTitle" />
+
+        <!-- Deadline -->
+        <LinearLayout
+            android:id="@+id/deadlineLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toEndOf="@id/checkboxComplete"
+            app:layout_constraintTop_toBottomOf="@id/tvTaskDescription">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_calendar"
+                app:tint="#999999" />
+
+            <TextView
+                android:id="@+id/tvDeadline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="25 Oktober 2025"
+                android:textSize="12sp"
+                android:textColor="#999999"
+                android:layout_marginStart="4dp" />
+        </LinearLayout>
+
+        <!-- More Options Button -->
+        <ImageButton
+            android:id="@+id/btnMore"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_more"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="More Options"
+            app:tint="#999999"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

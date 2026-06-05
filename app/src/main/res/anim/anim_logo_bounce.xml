@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/anim/anim_logo_bounce.xml -->
+<!-- Animasi utama logo: muncul dari kecil + fade in + sedikit bounce -->
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="@android:anim/overshoot_interpolator">
+
+    <!-- Scale dari 0 ke 1.08 lalu settle ke 1.0 (efek bounce) -->
+    <scale
+        android:duration="700"
+        android:fromXScale="0.0"
+        android:fromYScale="0.0"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:startOffset="200"
+        android:toXScale="1.08"
+        android:toYScale="1.08" />
+
+    <scale
+        android:duration="200"
+        android:fromXScale="1.08"
+        android:fromYScale="1.08"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:startOffset="900"
+        android:toXScale="1.0"
+        android:toYScale="1.0" />
+
+    <!-- Fade in bersamaan dengan scale -->
+    <alpha
+        android:duration="600"
+        android:fromAlpha="0.0"
+        android:startOffset="200"
+        android:toAlpha="1.0" />
+
+</set>

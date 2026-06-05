@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- HEADER BULAN -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingVertical="8dp">
+
+        <ImageButton
+            android:id="@+id/btnPrevMonth"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_chevron_left"
+            app:tint="#333" />
+
+        <TextView
+            android:id="@+id/tvMonthYear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Oktober 2025"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="#222" />
+
+        <ImageButton
+            android:id="@+id/btnNextMonth"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_chevron_right"
+            app:tint="#333" />
+
+    </LinearLayout>
+
+    <!-- HEADER HARI -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#5C6BC0"
+        android:paddingVertical="8dp">
+
+        <!-- 7 hari -->
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="Mo" android:textSize="13sp"
+            android:textColor="#FFF" android:gravity="center" android:textStyle="bold"/>
+
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="Tu" android:textSize="13sp"
+            android:textColor="#FFF" android:gravity="center" android:textStyle="bold"/>
+
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="We" android:textSize="13sp"
+            android:textColor="#FFF" android:gravity="center" android:textStyle="bold"/>
+
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="Th" android:textSize="13sp"
+            android:textColor="#FFF" android:gravity="center" android:textStyle="bold"/>
+
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="Fr" android:textSize="13sp"
+            android:textColor="#FFF" android:gravity="center" android:textStyle="bold"/>
+
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="Sa" android:textSize="13sp"
+            android:textColor="#FFF" android:gravity="center" android:textStyle="bold"/>
+
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="Su" android:textSize="13sp"
+            android:textColor="#FFF" android:gravity="center" android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <!-- RECYCLERVIEW -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCalendarDays"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:nestedScrollingEnabled="false" />
+
+</LinearLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    card_view:cardElevation="0dp"
+    card_view:cardBackgroundColor="@android:color/transparent">
+
+    <LinearLayout
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/bg_date_circle">
+
+        <TextView
+            android:id="@+id/txtDateNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

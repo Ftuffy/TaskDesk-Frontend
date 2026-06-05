@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/anim/anim_button_appear.xml -->
+<!-- Tombol panah: muncul perlahan dari bawah setelah semua elemen tampil -->
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="@android:anim/decelerate_interpolator">
+
+    <translate
+        android:duration="500"
+        android:fromYDelta="40dp"
+        android:startOffset="1200"
+        android:toYDelta="0dp" />
+
+    <alpha
+        android:duration="500"
+        android:fromAlpha="0.0"
+        android:startOffset="1200"
+        android:toAlpha="1.0" />
+
+</set>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#5271FF</color>
+    <color name="primary_variant">#2E55FF</color>
+    <color name="accent">#2CC0FF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="semi_white_70">#B3FFFFFF</color>
+    <color name="semi_white_20">#33FFFFFF</color>
+    <color name="black">#000000</color>
+    <!-- Warna Utama (Digunakan di daftartugasActivity.kt sebagai primaryColor) -->
+    <color name="colorPrimary">#5C6BC0</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!-- Warna dasar lainnya -->
+    <color name="gray_light">#E0E0E0</color>
+    <color name="bg_gradient">#EEF2FF</color>
+
+
+</resources>

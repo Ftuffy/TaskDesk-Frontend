@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    card_view:cardElevation="4dp"
+    card_view:cardCornerRadius="12dp"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Judul Kalender -->
+        <TextView
+            android:id="@+id/tvMonthTitle"
+            android:text="November 2025"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- Header Hari (M, T, W, T, F, S, S) -->
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="7"
+            android:rowCount="1"
+            android:layout_marginBottom="8dp">
+
+            <!-- Senin -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:gravity="center"
+                android:text="S" />
+
+            <!-- Selasa -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:gravity="center"
+                android:text="S" />
+
+            <!-- Rabu -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:gravity="center"
+                android:text="R" />
+
+            <!-- Kamis -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="K"
+                android:gravity="center" />
+
+            <!-- Jumat -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="J"
+                android:gravity="center" />
+
+            <!-- Sabtu -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="S"
+                android:gravity="center" />
+
+            <!-- Minggu -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="M"
+                android:gravity="center" />
+        </GridLayout>
+
+        <!-- GRID TANGGAL -->
+        <GridLayout
+            android:id="@+id/gridCalendar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="7"
+            android:rowCount="6"
+            android:alignmentMode="alignMargins"
+            android:useDefaultMargins="true"
+            >
+
+        </GridLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

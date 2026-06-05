@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Manajementugas</string>
+    <string name="cd_prev_month"><![CDATA[<string name=\"cd_prev_month\">Previous month</string>]]></string>
+    <string name="default_month_year"><![CDATA[<string name=\"default_month_year\">Oktober 2025</string>]]></string>
+    <string name="cd_next_month"><![CDATA[<string name=\"cd_next_month\">Next month</string>]]></string>
+</resources>

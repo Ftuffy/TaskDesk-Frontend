@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gradient"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="28dp">
+
+                <!-- Icon Lock -->
+                <FrameLayout
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bg_icon_lock">
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="center"
+                        android:src="@android:drawable/ic_lock_lock"
+                        app:tint="#FFFFFF" />
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:text="Register"
+                    android:textColor="#1E293B"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="4dp"
+                    android:text="Buat akun baru untuk memulai"
+                    android:textColor="#64748B"
+                    android:textSize="13sp" />
+
+                <!-- Username -->
+                <TextView
+                    style="@style/LabelStyle"
+                    android:layout_marginTop="24dp"
+                    android:text="Username" />
+
+                <EditText
+                    android:id="@+id/etUsername"
+                    style="@style/InputStyle"
+                    android:drawableStart="@android:drawable/ic_menu_myplaces"
+                    android:hint="Masukan nama anda"
+                    android:inputType="textPersonName" />
+
+                <!-- Email -->
+                <TextView
+                    style="@style/LabelStyle"
+                    android:text="Email" />
+
+                <EditText
+                    android:id="@+id/etEmail"
+                    style="@style/InputStyle"
+                    android:drawableStart="@android:drawable/ic_dialog_email"
+                    android:hint="nama@email.com"
+                    android:inputType="textEmailAddress" />
+
+                <!-- Password -->
+                <TextView
+                    style="@style/LabelStyle"
+                    android:text="Password" />
+
+                <EditText
+                    android:id="@+id/etPassword"
+                    style="@style/InputStyle"
+                    android:drawableStart="@android:drawable/ic_lock_lock"
+                    android:drawableEnd="@android:drawable/ic_menu_view"
+                    android:hint="••••••••"
+                    android:inputType="textPassword" />
+
+                <!-- Konfirmasi Password -->
+                <TextView
+                    style="@style/LabelStyle"
+                    android:text="Konfirmasi Password" />
+
+                <EditText
+                    android:id="@+id/etConfirmPassword"
+                    style="@style/InputStyle"
+                    android:drawableStart="@android:drawable/ic_lock_lock"
+                    android:drawableEnd="@android:drawable/ic_menu_view"
+                    android:hint="••••••••"
+                    android:inputType="textPassword" />
+
+                <!-- Checkbox Terms -->
+                <CheckBox
+                    android:id="@+id/cbTerms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:buttonTint="#7C3AED"
+                    android:text="Saya menyetujui Syarat &amp; Ketentuan"
+                    android:textColor="#475569"
+                    android:textSize="12sp" />
+
+                <!-- Tombol Sign Up -->
+                <Button
+                    android:id="@+id/btnSignUp"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_button_purple"
+                    android:text="Sign Up"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <!-- Login link -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sudah punya akun? "
+                        android:textColor="#64748B"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tvLogin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Login"
+                        android:textColor="#7C3AED"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</ScrollView>

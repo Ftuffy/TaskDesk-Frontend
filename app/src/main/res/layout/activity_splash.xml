@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    activity_splash.xml
+    Letakkan di: res/layout/activity_splash.xml
+
+    File animasi yang dibutuhkan (letakkan di res/anim/):
+      - anim_logo_bounce.xml
+      - anim_slide_up_fade.xml
+      - anim_button_appear.xml
+-->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CCF0F6FD">
+
+    <!-- ══════════════════════════════════════════
+         CURVED BACKGROUND (setengah lingkaran atas)
+         ══════════════════════════════════════════ -->
+    <View
+        android:id="@+id/curved_background"
+        android:layout_width="match_parent"
+        android:layout_height="420dp"
+        android:layout_marginBottom="316dp"
+        android:background="@drawable/curved_shape"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- ══════════════════════════════════════════
+         LOGO CONTAINER (lingkaran putih + logo)
+         ID: logo_container — target animasi bounce
+         ══════════════════════════════════════════ -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/logo_container"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:translationY="-80dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/curved_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/curved_background"
+        app:layout_constraintVertical_bias="1.0">
+
+        <!--
+            Ganti android:src="@drawable/ic_task_list_logo"
+            dengan drawable logo Task List (buku + stopwatch) milikmu.
+            Ukuran 130dp agar logo terlihat jelas dalam lingkaran 220dp.
+        -->
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:src="@drawable/splash_logo"
+            android:scaleType="fitCenter"
+            android:contentDescription="Task List Logo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- ══════════════════════════════════════════
+         NAMA APLIKASI
+         ID: tv_app_name — target animasi slide up
+         ══════════════════════════════════════════ -->
+    <TextView
+        android:id="@+id/tv_app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:fontFamily="serif"
+        android:letterSpacing="0.02"
+        android:text="Task Desk"
+        android:textAlignment="center"
+        android:textColor="#3F51B5"
+        android:textSize="38sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo_container" />
+
+    <!-- ══════════════════════════════════════════
+         TAGLINE
+         ID: tv_tagline — target animasi slide up
+         ══════════════════════════════════════════ -->
+    <TextView
+        android:id="@+id/tv_tagline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:lineSpacingExtra="6dp"
+        android:paddingStart="40dp"
+        android:paddingEnd="40dp"
+        android:text="A platform built for a new way of management"
+        android:textColor="#0C0C0F"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_app_name" />
+
+    <!-- ══════════════════════════════════════════
+         TOMBOL NAVIGASI PANAH
+         ID: btn_next — navigasi ke halaman Login/Register
+         Muncul terakhir setelah animasi logo & teks selesai
+         ══════════════════════════════════════════ -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="52dp"
+        android:contentDescription="Lanjut ke halaman berikutnya"
+        android:src="@drawable/ic_arrow_forward"
+        android:visibility="invisible"
+        app:backgroundTint="#3F51B5"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:rippleColor="#5C6BC0"
+        app:tint="#FFFFFF" />
+
+    <!--
+        CATATAN: Jika FloatingActionButton belum tersedia,
+        tambahkan dependency di build.gradle:
+        implementation 'com.google.android.material:material:1.11.0'
+
+        Lalu buat drawable ic_arrow_forward di res/drawable/ic_arrow_forward.xml:
+        Gunakan Vector Asset (klik kanan drawable > New > Vector Asset)
+        cari "arrow_forward" atau "chevron_right"
+    -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
